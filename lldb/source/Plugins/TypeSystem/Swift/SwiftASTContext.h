@@ -553,6 +553,9 @@ public:
 
   const SwiftModuleMap &GetModuleCache() { return m_swift_module_cache; }
 
+  typedef llvm::StringMap<unsigned> SwiftModuleInvalidAstErrors;
+  SwiftModuleInvalidAstErrors &GetSwiftInvalidAstErrors() { return m_swift_module_invalid_ast_errors; }
+
   const swift::irgen::TypeInfo *
   GetSwiftTypeInfo(lldb::opaque_compiler_type_t type);
 
